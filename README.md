@@ -1,69 +1,94 @@
-# React + TypeScript + Vite
+Talrn Clone – React Task Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React.js assessment task replicating the core flows of Talrn.com
+, including the homepage and the /join registration flow with OTP-based email verification.
 
-Currently, two official plugins are available:
+🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 https://talrn-clone.vercel.app
 
-## Expanding the ESLint configuration
+🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+React.js (with Vite)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+TypeScript
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+React Router DOM – for routing
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+TailwindCSS – for styling
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+EmailJS – for sending OTP emails
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Vercel – for deployment
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⚙️ Setup & Installation
+
+Clone the repository
+
+git clone https://github.com/patilnehu/Talrn_Clone.git
+cd Talrn_Clone
+
+Install dependencies
+
+npm install
+
+Run in development mode
+
+npm run dev
+
+Build for production
+
+npm run build
+npm run preview
+
+🔑 EmailJS Configuration
+
+This project uses EmailJS for sending OTPs.
+
+To make it work:
+
+Create an EmailJS
+account.
+
+Replace the following values in OrganizationForm.tsx (and IndividualForm.tsx if used):
+
+service_qc42bjl → Your EmailJS Service ID
+
+template_b1dopuf → Your Template ID
+
+fTP2kZ98PDNwaqYW4 → Your Public Key
+
+📂 Project Structure
+src/
+│── components/ # Shared UI components (Header, Footer, Forms, etc.)
+│── pages/ # Page components (Home, Join, Verify, Success)
+│── App.tsx # App entry with React Router setup
+│── main.tsx # React DOM render
+public/ # Static assets
+vercel.json # SPA routing configuration for Vercel
+
+✅ Features Implemented
+
+Home page UI replicated from Talrn.com.
+
+/join page with radio toggle for Organization and Individual forms.
+
+Email OTP verification with 6-digit code.
+
+LocalStorage used to persist OTP + email between pages.
+
+Responsive design across devices.
+
+Success page confirmation after verification.
+
+📌 Deployment Notes
+
+Hosted on Vercel with SPA fallback (vercel.json) to support React Router.
+
+All client-side routes (/join, /verify, /success) work directly in browser.
+
+📞 Contact
+
+Developer: Neha Patil
+
+Email: dev.nehapatil@gmail.com

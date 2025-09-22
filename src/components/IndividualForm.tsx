@@ -15,20 +15,20 @@ export default function IndividualForm() {
     // Send email via EmailJS
     emailjs
       .send(
-        "service_qc42bjl", // Replace with EmailJS Service ID
-        "template_b1dopuf", // Replace with Template ID
+        "service_qc42bjl",
+        "template_b1dopuf",
         {
           to_email: email,
           otp: otp,
         },
-        "fTP2kZ98PDNwaqYW4" // Replace with Public Key
+        "fTP2kZ98PDNwaqYW4"
       )
       .then(
         () => {
           // Save OTP & email in localStorage for verification page
           localStorage.setItem("otp", otp);
           localStorage.setItem("email", email);
-          navigate("/verify"); // Go to verification page
+          navigate("/verify");
         },
         (err) => {
           console.error("Email send error:", err);
@@ -70,7 +70,7 @@ export default function IndividualForm() {
           </div>
           <div>
             <input
-              type="phone number"
+              type="tel"
               placeholder="Phone Number*"
               className="mt-1 py-4 px-4 w-80 rounded-lg  bg-white border-gray-300 focus:border-blue-500 focus:ring-blue-500"
               required
