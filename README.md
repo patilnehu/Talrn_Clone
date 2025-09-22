@@ -3,9 +3,13 @@ Talrn Clone – React Task Assessment
 This project is a React.js assessment task replicating the core flows of Talrn.com
 , including the homepage and the /join registration flow with OTP-based email verification.
 
+<hr/>
+
 🚀 Live Demo
 
 🔗 https://talrn-clone.vercel.app
+
+<hr/>
 
 🛠️ Tech Stack
 
@@ -20,6 +24,8 @@ TailwindCSS – for styling
 EmailJS – for sending OTP emails
 
 Vercel – for deployment
+
+<hr/>
 
 ⚙️ Setup & Installation
 
@@ -41,6 +47,8 @@ Build for production
 npm run build
 npm run preview
 
+<hr/>
+
 🔑 EmailJS Configuration
 
 This project uses EmailJS for sending OTPs.
@@ -58,6 +66,8 @@ template_b1dopuf → Your Template ID
 
 fTP2kZ98PDNwaqYW4 → Your Public Key
 
+<hr/>
+
 📂 Project Structure
 src/
 │── components/ # Shared UI components (Header, Footer, Forms, etc.)
@@ -66,6 +76,8 @@ src/
 │── main.tsx # React DOM render
 public/ # Static assets
 vercel.json # SPA routing configuration for Vercel
+
+<hr/>
 
 ✅ Features Implemented
 
@@ -81,11 +93,15 @@ Responsive design across devices.
 
 Success page confirmation after verification.
 
+<hr/>
+
 📌 Deployment Notes
 
 Hosted on Vercel with SPA fallback (vercel.json) to support React Router.
 
 All client-side routes (/join, /verify, /success) work directly in browser.
+
+<hr/>
 
 📞 Contact
 
