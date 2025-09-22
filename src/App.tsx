@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Join from "./pages/Join";
 import FloatingButtons from "./components/FloatingButtons";
+import VerifyPage from "./pages/Verification";
+import SuccessPage from "./pages/Success";
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/join" element={<Join />} />
-          <Route />
-          <Route />
+          <Route path="/verify" element={<VerifyPage />} />
+          <Route path="/success" element={<SuccessPage />} />
         </Routes>
       </main>
       <FloatingButtons />

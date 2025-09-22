@@ -13,7 +13,7 @@ export default function FloatingButtons() {
       const progress = (window.scrollY / totalHeight) * 100;
 
       setScrollProgress(progress);
-      setVisible(window.scrollY > window.innerHeight * 0.8); // show after Hero
+      setVisible(window.scrollY > window.innerHeight * 0.3); // show after Hero
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,7 +36,7 @@ export default function FloatingButtons() {
           {/* Chat Bubble */}
           <button
             onClick={openChat}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent  text-blue-500 shadow-lg transition-all"
           >
             <FaCommentDots size={20} />
           </button>
@@ -44,7 +44,7 @@ export default function FloatingButtons() {
           {/* Scroll Progress Button */}
           <button
             onClick={scrollToTop}
-            className="relative w-12 h-12 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:bg-gray-800 transition-all"
+            className="relative w-12 h-12 flex items-center justify-center rounded-full bg-transparent text-blue-500 shadow-lg transition-all"
           >
             {/* Progress Circle */}
             <svg className="absolute w-12 h-12 -rotate-90">
