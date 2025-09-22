@@ -68,14 +68,14 @@ fTP2kZ98PDNwaqYW4 → Your Public Key
 
 <hr/>
 
-📂 Project Structure
-src/
-│── components/ # Shared UI components (Header, Footer, Forms, etc.)
-│── pages/ # Page components (Home, Join, Verify, Success)
-│── App.tsx # App entry with React Router setup
-│── main.tsx # React DOM render
-public/ # Static assets
-vercel.json # SPA routing configuration for Vercel
+📂 Project Structure <br/>
+src/ <br/>
+│── components/ # Shared UI components (Header, Footer, Forms, etc.)<br/>
+│── pages/ # Page components (Home, Join, Verify, Success) <br/>
+│── App.tsx # App entry with React Router setup <br/>
+│── main.tsx # React DOM render<br/>
+public/ # Static assets <br/>
+vercel.json # SPA routing configuration for Vercel <br/>
 
 <hr/>
 
